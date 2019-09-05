@@ -1,0 +1,88 @@
+<html>
+    <head>
+        
+
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./index.css">
+
+        <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./index.js"></script>
+        
+    </head>
+    <body>
+
+        <main role="main" class="container">
+
+            <div class="starter-template">
+                <h1>Simple Print Delay Tool</h1>
+                <p class="lead">Used to calculate additional print instructions</p>
+            </div>
+ 
+            <div class="row">
+                <div class="col-sm">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Layer Height</span>
+                            </div>
+                            <input type="text" class="form-control decimal-check" aria-label="Milimeters" id="layer-height" value="0.050"/>
+                            <div class="input-group-append">
+                                <span class="input-group-text">MM</span>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
+            <h3>Layer Information</h3>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" id="newLayer">New Layer</button>
+                <button type="button" class="btn btn-secondary" id="generate">Generate Script</button>
+                <button type="button" class="btn btn-info" id="sort">Sort Layers</button>
+            </div>
+
+            <p></p>
+
+            <div id="rows">
+
+            </div>
+            
+            <div class="jumbotron">
+                <h1 class="display-4">Output</h1>
+                <textarea id="output" rows="8" style="width:100%;"></textarea>           
+            </div>
+
+        </main>
+
+        <div id="row-source" style="display: none;">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Position</span>
+                        </div>
+                        <input type="text" class="form-control input-position decimal-check layer-check" aria-label="Milimeters" value="50"/>
+                        <div class="input-group-append">
+                            <span class="input-group-text">MM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Time</span>
+                        </div>
+                        <input type="text" class="form-control input-time integer-check" aria-label="Seconds" value="0"/>
+                        <div class="input-group-append">
+                            <span class="input-group-text">Sec</span>
+                            <button type="button" class="btn btn-danger row-remove">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
